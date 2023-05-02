@@ -1,0 +1,26 @@
+erDiagram
+    rnc_rna_precomputed {
+        character_varying id 
+        bigint taxid 
+        character_varying description 
+        character_varying upi 
+        character_varying rna_type 
+        date update_date 
+        boolean has_coordinates 
+        text databases 
+        boolean is_active 
+        integer last_release 
+        text short_description 
+        text so_rna_type 
+        boolean is_locus_representative 
+        text assigned_so_rna_type 
+    }
+
+    rnc_gene_status {
+        bigint id 
+        text assembly_id 
+        text urs_taxid 
+        integer region_id 
+        text status 
+    }
+
