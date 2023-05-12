@@ -33,13 +33,13 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - run: |
-          ls
-          pwd
-          git log -1 --pretty=%B -- entity-relationship-diagrams/latest.mmd
-          for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done
       - name: generate entity relationship diagrams page
-        run: for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done >> docs/erdiagrams.md
+        run: |
+          for file in $(ls -rd entity-relationship-diagrams/2*.mmd | head -5); do \
+            echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; \
+            echo "[Live Editor](https://mermaid.live/edit?code=https://raw.githubusercontent.com/${{ github.repository }}/main/${{ env.ER_DIAGRAM_PATH }}/${file})";
+          done \
+          >> docs/erdiagrams.md
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
