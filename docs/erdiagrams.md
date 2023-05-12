@@ -1,10 +1,14 @@
 ---
 title: ER diagrams
 layout: default
+nav_order: 2
 ---
 
-# manual
-manual:
-[From commit](https://github.com/lnschroeder/github-pages-playground/commit/c1b096063d5118a8883ee33a9fd1a719cf45cc51)
+# Entity Relationship Diagrams
+## Latest changes
+Permanent link for latest diagram:
 
-# auto
+[https://mermaid.live/edit?code=https://raw.githubusercontent.com/lnschroeder/github-pages-playground-reports/main/entity-relationship-diagrams/latest.mmd](https://mermaid.live/edit?code=https://raw.githubusercontent.com/lnschroeder/github-pages-playground-reports/main/entity-relationship-diagrams/latest.mmd)
+
+## Last changes
+{% This will be set by the pipeline %}

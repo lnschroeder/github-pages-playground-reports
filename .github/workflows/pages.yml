@@ -37,7 +37,7 @@ jobs:
         run: |
           for file in $(ls -rd entity-relationship-diagrams/2*.mmd | head -5); do \
             echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; \
-            echo "[Live Editor](https://mermaid.live/edit?code=https://raw.githubusercontent.com/${{ github.repository }}/main/${{ env.ER_DIAGRAM_PATH }}/${file})";
+            echo "[Live Editor](https://mermaid.live/edit?code=https://raw.githubusercontent.com/${{ github.repository }}/main/entity-relationship-diagrams/${file})";
           done \
           >> docs/erdiagrams.md
       - name: Setup Ruby
