@@ -36,7 +36,7 @@ jobs:
       - name: generate entity relationship diagrams page
         run: |
           for file in $(ls -rd entity-relationship-diagrams/2*.mmd | head -5); do
-            echo -e "## ${file}";
+            echo -e "### ${file}";
             echo -e "\`\`\`markdown";
             echo -e "$(git log -1 --pretty=%B -- ${file})";
             echo -e "\`\`\`";
