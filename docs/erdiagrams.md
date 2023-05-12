@@ -11,4 +11,3 @@ Permanent link for latest diagram:
 [https://mermaid.live/edit?code=https://raw.githubusercontent.com/lnschroeder/github-pages-playground-reports/main/entity-relationship-diagrams/latest.mmd](https://mermaid.live/edit?code=https://raw.githubusercontent.com/lnschroeder/github-pages-playground-reports/main/entity-relationship-diagrams/latest.mmd)
 
 ## Last changes
-{% This will be set by the pipeline %}
