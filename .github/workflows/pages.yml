@@ -34,6 +34,7 @@ jobs:
       - run: |
           ls
           pwd
+          git log -1 --pretty=%B -- entity-relationship-diagrams/latest.mmd
           for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done
       - name: generate entity relationship diagrams page
         run: for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done >> docs/erdiagrams.md
