@@ -31,8 +31,9 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+      - run: for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done
       - name: generate entity relationship diagrams page
-        run: for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done >> erdiagrams.md
+        run: for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done >> docs/erdiagrams.md
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
