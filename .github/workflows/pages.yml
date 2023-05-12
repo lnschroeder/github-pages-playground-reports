@@ -36,7 +36,8 @@ jobs:
       - name: generate entity relationship diagrams page
         run: |
           for file in $(ls -rd entity-relationship-diagrams/2*.mmd | head -5); do \
-            echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; \
+            echo -e "## ${file}";
+            echo -e "$(git log -1 --pretty=%B -- ${file})"; \
             echo "[Live Editor](https://mermaid.live/edit?code=https://raw.githubusercontent.com/${{ github.repository }}/main/entity-relationship-diagrams/${file})";
           done \
           >> docs/erdiagrams.md
