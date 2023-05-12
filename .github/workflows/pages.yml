@@ -32,7 +32,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
       - name: generate entity relationship diagrams page
-        run: for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "${file} \n $(git log -1 --pretty=%B -- ${file})"; done >> erdiagrams.md
+        run: for file in $(ls -rd entity-relationship-diagrams/*.mmd | head -5); do echo -e "## ${file} \n $(git log -1 --pretty=%B -- ${file})\n"; done >> erdiagrams.md
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
