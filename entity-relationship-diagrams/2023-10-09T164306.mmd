@@ -1,0 +1,25 @@
+erDiagram
+    doc_unit {
+        integer abc
+        timestamp_with_time_zone creationtimestamp
+        character_varying documentnumber
+        text entscheidungsgruende
+        character_varying filetype
+        timestamp_with_time_zone fileuploadtimestamp
+        bigint id PK "this is a column comment"
+        uuid uuid
+    }
+
+    flyway_schema_history {
+        integer checksum
+        character_varying description
+        integer execution_time
+        character_varying installed_by
+        timestamp_without_time_zone installed_on
+        integer installed_rank PK
+        character_varying script
+        boolean success
+        character_varying type
+        character_varying version
+    }
+
